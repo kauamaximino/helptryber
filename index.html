@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Help Tryber</title>
+  </head>
+  
+  <body>
+    <header class="header">
+      <img id="logo-trybe" src="Trybe-200x200 (1).jpg" width="60" alt="logo Trybe" />
+      <h1 id="trybewarts-header-title">Help Tryber</h1>
+    </header>
+    <div class="container">
+    <div class="container-mentoria">
+      <form action="" id="evaluation-form">
+        <h2>Formulário de ajuda</h2>
+        <div class="information-container">
+            <input id="input-name" type="text" placeholder="Nome" />
+              <input type="email" id="input-email" placeholder="Email" />
+        </div>
+              <section class="date-form">
+                <p class="text-time-date" for="input-time-date">Dia Disponível</p>
+                <input type="date" name="" id="inputCheckin" class="inputCheckin" />  
+                <p class="text-time-date" for="input-time-date">Hora Disponível</p>     
+                <input type="time" name="" id="inputCheckin" class="inputCheckin" />    
+                <input type="time" name="" id="inputCheckin" class="inputCheckin" />                 
+              </section>
+        <div class="conteudo">
+          <div class="name-conteudo">
+            <label id="label-content" for="conteudo">Qual conteúdo você está disponível para ajudar?</label>
+          </div>
+          <input class="subject" type="radio" name="conteudo" value="HoFs"/> HoFs <br />
+          <input class="subject" type="radio" name="conteudo" value="Jest"/> Jest <br />
+          <input class="subject" type="radio" name="conteudo" value="Promises"/> Promises <br />
+          <input class="subject" type="radio" name="conteudo" value="React"/> React <br />
+          <input class="subject" type="radio" name="conteudo" value="SQL" /> SQL <br />
+          <input class="subject" type="radio" name="conteudo" value="Python"> Python <br />
+        </div>
+        <section class="container">
+        <button class="btn-send-mentor">Enviar</button>
+      </section>
+      </form>
+  
+    <div class="todo-list">
+      <div class="todo-list-box">
+        <p>NOME NOME NOME</p>
+        <p>DIA 00/00/00</p>
+        <p>HORA 00:00</p>
+      </div>
+      <div class="todo-list-box">
+        <p>NOME NOME NOME</p>
+        <p>DIA 00/00/00</p>
+        <p>HORA 00:00</p>
+        <div class="div-materias">
+         <p>Matérias:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-ajudado">
+      <form action="" id="evaluation-form">
+        <h2>Formulário</h2>
+        <div class="information-container">
+          <div>
+          <input id="input-name" type="text" placeholder="Nome" />
+            <input type="text" id="input" placeholder="Mentor" />
+          </div>
+            <section class="date-form">
+              <p class="text-time-date" for="input-time-date">Dia e hora Disponível</p>
+              <input type="datetime-local" name="" id="inputCheckin" class="inputCheckin" />                    
+            </section>
+            <textarea id="w3review" name="w3review" rows="4" cols="50">
+              Envie seu comentário sobre a ajuda recebida.
+              </textarea>  
+              <section class="container">
+                <button class="btn-send-mentor">Enviar</button>
+              </section>
+          </div>
+      </form>
+    </div>
+  </div>
+    <div class="footer-container">
+      <!-- <footer>Direitos reservados à Trybewarts©</footer> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
