@@ -1,16 +1,19 @@
 // const projetosBloco1 = require('/home/kaua/Área de Trabalho/Projetos Pessoais/projeto-bonus-semama-ontrack/helptryber/projetosBloco1.js')'
 
-const projetos = [
+const ProjectBlockOne = [
   'JS Unit Test',
   'Zoo Functions',
   'Shopping Cart'
 ]
 
-const teste = document.querySelector('.container-ajudado')
+const divProject = document.querySelector('.project-list');
 
-console.log(teste);
-// function createProject() {
-//   console.log(projects);
-// }
 
-// createProject()
+function createProject() {
+  const input = document.createElement('')
+  input.innerHTML = 'test'
+  divProject.appendChild(input)
+
+}
+
+createProject()
