@@ -74,7 +74,7 @@ h2 {
   padding: 8px;
 }
 
-.information-mentor-container input {
+.information-mentor-container  input {
   width: 250px;
   height: 30px;
   margin: 5px;
@@ -88,7 +88,21 @@ h2 {
   padding: 5px 10px 5px 8px;
 }
 
-.inputMentorDate {
+.input-helped-name {
+  width: 250px;
+  height: 30px;
+  margin: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 10px 5px 8px;
+}
+.inputMentorDate,
+.inputHelpedDate {
   width: 230px;
   height: 30px;
   margin: 5px;
@@ -117,21 +131,37 @@ h2 {
   padding: 5px 10px 5px 8px;
 }
 
+.inputHelpedTimeStart,
+.inputHelpedTimeStart {
+  width: 140px;
+  height: 30px;
+  margin: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 10px 5px 8px;
+}
+
+.text-date, .text-time {
+  font-size: 12px;
+  text-align: center;
+  
+
+}
+
 .text-time2 {
   font-size: small;
-
 }
 
-.date-mentor-form {
+.date-mentor-form, 
+.date-helped-form {
   display: flex;
-  margin: 5px;
+  margin: 15px 5px;
 }
-
-/* .family-container {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-} */
 
 .footer-container {
   margin-top: 70px;
@@ -169,13 +199,25 @@ h2 {
 
 .name-projects {
   display: flex;
+  margin: 10px;
 }
 
-.btn-send-mentor {
-  width: 90px;
-  height: 30px;
-  margin-bottom: 10px;
+.container-button-send-mentor, .container-btn-send-helped {
+  display: flex;
+  justify-content: center;
 }
+
+.btn-send-mentor, .btn-send-helped {
+  width: 100px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 8px 2px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: var(--verde-claro);
+  font-size: 1rem;
+}
+
 
 .list-mentor-box p {
   color: var(--cinza1);
@@ -187,12 +229,17 @@ h2 {
   align-items: center;
 }
 
-.container {
+.container-geral {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-textarea {
+/* .container {
+  display: flex;
+  justify-content: space-evenly;
+} */
+
+textarea {  
   margin-left: 40px;
 }
 
