@@ -46,9 +46,11 @@ const addMentor = () => {
   const div = document.createElement('div');
   div.className = 'list-mentor-box';
   const p = document.createElement('p');
-  p.innerText = `${nameMentor.value} disponivel dia ${dayMentor.value} das ${initTimeMentor.value} as ${endTimeMentor.value}
-  Mentor nas materias: ${valueCheckbox(materias)}`;
+  p.innerText = `${nameMentor.value} 
+  Disponível dia: ${dayMentor.value} - Horário: das ${initTimeMentor.value} as ${endTimeMentor.value}
+  Voluntário nos projetos: ${valueCheckbox(materias)}`;
   div.appendChild(p);
+  div.addEventListener('click', cartItemClickListener);
   return div;
 };
 
@@ -83,5 +85,18 @@ const verifyStatus = () => {
 }
 
 all.addEventListener('click', () => verifyStatus());
+
+// https://www.w3schools.com/howto/howto_js_popup_form.asp
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function cartItemClickListener(event) {
+  event.target.remove(); // Na Li que clicar remove, escutador está na função que cria Li.
+}
 
 createProject();
