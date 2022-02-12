@@ -149,9 +149,8 @@ h2 {
 .text-date, .text-time {
   font-size: 12px;
   text-align: center;
-  
 
-}
+  }
 
 .text-time2 {
   font-size: small;
@@ -234,12 +233,8 @@ h2 {
   justify-content: space-around;
 }
 
-/* .container {
-  display: flex;
-  justify-content: space-evenly;
-} */
-
-textarea {  
+textarea { 
+  display: flex; 
   margin-left: 40px;
 }
 
