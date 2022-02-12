@@ -78,10 +78,6 @@ const desmarcarTodos = () => {
   materias.forEach((mat) => mat.checked = 0);
 }
 
-const verifyStatus = () => {
-  all.checked ? marcarTodos() : desmarcarTodos();
-}
-
-all.addEventListener('click', () => verifyStatus());
+all.addEventListener('click', () => all.checked ? marcarTodos() : desmarcarTodos());
 
 createProject();
