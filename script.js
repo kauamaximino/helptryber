@@ -33,6 +33,8 @@ const createElement = (element, bloco, valor, tipo, classe) => {
 };
 
 function valueCheckbox(checkboxId) {
+  console.log(all.checked);
+  if (all.checked) return 'Todos os projetos'
   const arrayCheckbox = [];
   for (let i = 0; i < checkboxId.length; i += 1) {
     if (checkboxId[i].checked === true) {
