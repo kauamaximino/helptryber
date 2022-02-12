@@ -186,9 +186,9 @@ h2 {
 .coontainer-list-mentor {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   width: 560px;
+  height: 500px;
   box-shadow: 2px 2px 10px 2px rgb(139, 138, 138);
   margin-left: 10px;
   margin-top: 20px;
@@ -260,4 +260,5 @@ footer {
 
 h3 {
   color: black;
+  text-align: start;
 }

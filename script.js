@@ -6,6 +6,7 @@ const initTimeMentor = document.getElementById('inputMentorTimeStart');
 const endTimeMentor = document.getElementById('inputMentorTimeEnd');
 const containerMentor = document.querySelector('.coontainer-list-mentor');
 const btnMentor = document.getElementById('btn-send-mentor');
+const materias = document.getElementsByName('projetos-Bloco-1');
 
 const help = {
     bloco: 'projetos-Bloco-1',
@@ -30,11 +31,22 @@ const createElement = (element, bloco, valor, tipo, classe) => {
   return lab;
 };
 
+function valueCheckbox(checkboxId) {
+  const arrayCheckbox = [];
+  for (let i = 0; i < checkboxId.length; i += 1) {
+    if (checkboxId[i].checked === true) {
+      arrayCheckbox.push(checkboxId[i].value);
+    }
+  }
+  return arrayCheckbox.join(', ');
+}
+
 const addMentor = () => {
   const div = document.createElement('div');
   div.className = 'list-mentor-box';
   const p = document.createElement('p');
-  p.innerText = `${nameMentor.value} disponivel dia ${dayMentor.value} das ${initTimeMentor.value} as ${endTimeMentor.value}`;
+  p.innerText = `${nameMentor.value} disponivel dia ${dayMentor.value} das ${initTimeMentor.value} as ${endTimeMentor.value}
+  Mentor nas materias: ${valueCheckbox(materias)}`;
   div.appendChild(p);
   return div;
 };
@@ -42,14 +54,18 @@ const addMentor = () => {
 function createProject() {
   const { projectBlockOne } = help;
   const { bloco } = help;
+  const div = document.createElement('div');
+  div.className = 'materias'
+  divProject.appendChild(div);
   projectBlockOne.forEach((elem) => {
-    divProject.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
+    div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
   });
-  ;
+  
 }
 
 btnMentor.addEventListener('click', (event) => {
   event.preventDefault();
+  console.log(materias);
   containerMentor.appendChild(addMentor());
 });
 
