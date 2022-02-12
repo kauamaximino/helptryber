@@ -185,13 +185,13 @@ h2 {
 
 .coontainer-list-mentor {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 560px;
   box-shadow: 2px 2px 10px 2px rgb(139, 138, 138);
   margin-left: 10px;
   margin-top: 20px;
-  height: 70px;
-  width: 480px;
   background: rgb(255, 243, 131);
   padding: 10px;
   border-radius: 8px;
@@ -207,7 +207,7 @@ h2 {
   justify-content: center;
 }
 
-.btn-send-mentor, .btn-send-helped {
+#btn-send-mentor, .btn-send-helped {
   width: 100px;
   text-align: center;
   margin-top: 15px;
@@ -249,4 +249,15 @@ footer {
   border: 1px solid #dee2e6;
   text-align: center;
   width: 100%;
+}
+
+.lab-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:left;
+  align-items: center;
+}
+
+h3 {
+  color: black;
 }
