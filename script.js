@@ -7,10 +7,11 @@ const endTimeMentor = document.getElementById('inputMentorTimeEnd');
 const containerMentor = document.querySelector('.coontainer-list-mentor');
 const btnMentor = document.getElementById('btn-send-mentor');
 const materias = document.getElementsByName('projetos-Bloco-1');
+const all = document.getElementById('all');
 
 const help = {
     bloco: 'projetos-Bloco-1',
-    projectBlockOne: ['JS Unit Test','Zoo Functions','Shopping Cart'],
+    projectBlockOne: ['Lessons learned', 'Playground Functions', 'Meme Generator', 'Arte com Pixels', 'Lista de tarefas', 'Adivinhe a Cor', 'Carta Misteriosa', 'Trybewarts','JS Unit Test','Zoo Functions','Shopping Cart'],
   };
 
 const divProject = document.querySelector('.project-list');
@@ -68,5 +69,19 @@ btnMentor.addEventListener('click', (event) => {
   console.log(materias);
   containerMentor.appendChild(addMentor());
 });
+
+const marcarTodos = () => {
+  materias.forEach((mat) => mat.checked = 1);
+}
+
+const desmarcarTodos = () => {
+  materias.forEach((mat) => mat.checked = 0);
+}
+
+const verifyStatus = () => {
+  all.checked ? marcarTodos() : desmarcarTodos();
+}
+
+all.addEventListener('click', () => verifyStatus());
 
 createProject();

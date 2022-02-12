@@ -46,7 +46,7 @@ h1 {
   /* display: flex; */
   margin: 30px 40px 2px 40px;
   width: 560px;
-  height: 340px;
+  height: 400px;
   flex-direction: column;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -200,6 +200,7 @@ h2 {
 .name-projects {
   display: flex;
   margin: 10px;
+  text-align: center;
 }
 
 .container-button-send-mentor, .container-btn-send-helped {
@@ -252,6 +253,7 @@ footer {
 }
 
 .lab-checkbox {
+  width: 250px;
   display: flex;
   flex-direction: row-reverse;
   justify-content:left;
@@ -261,4 +263,10 @@ footer {
 h3 {
   color: black;
   text-align: start;
+}
+
+.materias {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
