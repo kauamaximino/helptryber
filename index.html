@@ -20,8 +20,10 @@
 
     <div class="container-mentoria">
 <!--  -->
+<button class="open-button" onclick="openForm()" >Cadastro de Voluntário</button>
+<div class="form-popup" id="myForm">
       <form action="" id="mentoria-form">
-        <h2>CADASTRO MENTOR</h2>
+        <h2>CADASTRO VOLUNTÁRIO</h2>
 
         <div class="information-mentor-container">
             <input id="input-mentor-name" type="text" placeholder="Nome" />
@@ -41,7 +43,7 @@
         <div class="project-list">
 
           <div class="name-projects">
-            <label id="label-content-projects" for="project-list">Qual projeto você está disponível para ajudar?</label>
+            <label id="label-content-projects" for="project-list">Qual projeto você está disponível para ajudar? </label>
             <label for="all">
               <input type="checkbox" name="all" id="all">Todos
             </label>
@@ -49,16 +51,16 @@
         </div>
 
         <section class="container-button-send-mentor">
-        <button id="btn-send-mentor">Enviar</button>
+        <button type="button" id="btn-send-mentor" class="btn-send-mentor btn cancel" onclick="closeForm()">Enviar</button>
         </section>
-      
+
       </form>
+    </div>
     <div class="coontainer-list-mentor">
-      <h3>Mentores disponiveis</h3>
+      <h3>Voluntários disponíveis</h3>
     </div>
     </div>
-  </div>
-<!--  -->
+    <!--  -->
     <div class="container-helped">
 
       <form action="" id="helped-form">
@@ -78,20 +80,22 @@
             <p class="text-time2">até</p>     
             <input type="time" name="" id="inputHelpedTimeStart" class="inputHelpedTimeStart" />                 
           </section>
-
+            <div class="div-textarea">
             <textarea id="message-helped" name="message-helped" rows="4" cols="50">
               Envie seu comentário sobre a ajuda recebida.
               </textarea> 
+            </div>
 
               <section class="container-btn-send-helped">
                 <button class="btn-send-helped">Enviar</button>
               </section>
-
-        </div>
-
+              
+            </div>
+            
       </form>
 
     </div>
+  </div>
     <!--  -->
   </div>
     <div class="footer-container">
