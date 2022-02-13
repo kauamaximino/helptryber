@@ -68,9 +68,19 @@ function createProject() {
   
 }
 
+const verifyMateria = () => {
+  let verifica = false;
+  materias.forEach((mat) => {
+    if ( mat.checked === true ) verifica = true;
+  });
+  return verifica;
+} 
+
 btnMentor.addEventListener('click', (event) => {
+  const verificaMat = verifyMateria();
+  console.log(verificaMat);
+  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) return alert('Preencha todos os campos');
   event.preventDefault();
-  console.log(materias);
   containerMentor.appendChild(addMentor());
 });
 
