@@ -323,9 +323,11 @@ footer {
 .open-button {
   margin-top: 10px;
   background-color: var(--verde-escuro);
-  background-image: url(open_in_app_icon_138328.svg);
+  background-image: url(form-white.png);
+  fill: white;
   background-repeat: no-repeat;
-  background-size: 40px;
+  background-size: 35px;
+  background-position: 135px 5px;
   fill: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 3px;
@@ -342,8 +344,12 @@ footer {
   
 }
 
+.open-button:hover path {
+  fill: red;
+}
+
 #mentoria-form {
-  margin: -70px 40px 2px 40px;
+  margin: -40px 40px 2px 40px;
   width: 600px;
   height: 370px;
   flex-direction: column;
