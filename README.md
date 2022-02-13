@@ -19,7 +19,7 @@ Este projeto foi desenvolvido seguindo as especificações colocada pelos instru
 ##### - A apresentação dos projetos será avaliada por pessoas do nosso time de tecnologia, instrução e facilitação.
 
 ## 2 - Requisitos obrigatórios:
-##### - Utilizar uma API externa desta lista;
+##### - Utilizar uma API externa desta lista:  _[Lista API](https://github.com/public-apis/public-apis#open-data)_;
 ##### - Utilizar funções HoF no projeto;
 ##### - Deve existir alguma(s) manipulação(ões) do DOM a partir de um ação do usuário usando o addEventListener em algum(ns) elemento(s) do HTML;
 ##### - Todas as HoF’s utilizadas no projeto devem ter, pelo menos, 1 teste de validação usando o Jest;
