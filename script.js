@@ -33,6 +33,8 @@ const createElement = (element, bloco, valor, tipo, classe) => {
 };
 
 function valueCheckbox(checkboxId) {
+  console.log(all.checked);
+  if (all.checked) return 'Todos os projetos'
   const arrayCheckbox = [];
   for (let i = 0; i < checkboxId.length; i += 1) {
     if (checkboxId[i].checked === true) {
@@ -66,11 +68,13 @@ function createProject() {
   
 }
 
-btnMentor.addEventListener('click', (event) => {
-  event.preventDefault();
-  console.log(materias);
-  containerMentor.appendChild(addMentor());
-});
+const verifyMateria = () => {
+  let verifica = false;
+  materias.forEach((mat) => {
+    if ( mat.checked === true ) verifica = true;
+  });
+  return verifica;
+} 
 
 const marcarTodos = () => {
   materias.forEach((mat) => mat.checked = 1);
@@ -80,11 +84,25 @@ const desmarcarTodos = () => {
   materias.forEach((mat) => mat.checked = 0);
 }
 
-const verifyStatus = () => {
-  all.checked ? marcarTodos() : desmarcarTodos();
+const clearForm = () => {
+  nameMentor.value = '';
+  emailMentor.value = '';
+  dayMentor.value = '';
+  initTimeMentor.value = '';
+  endTimeMentor.value = '';
+  desmarcarTodos();
 }
 
-all.addEventListener('click', () => verifyStatus());
+btnMentor.addEventListener('click', (event) => {
+  const verificaMat = verifyMateria();
+  console.log(verificaMat);
+  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) return alert('Preencha todos os campos');
+  event.preventDefault();
+  containerMentor.appendChild(addMentor());
+  clearForm();
+});
+
+all.addEventListener('click', () => all.checked ? marcarTodos() : desmarcarTodos());
 
 
 // função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'block', que gera uma caixa de elemento de bloco.
@@ -100,7 +118,14 @@ function closeForm() {
 }
 
 function cartItemClickListener(event) {
-  event.target.remove(); // Na Li que clicar remove, escutador está na função que cria Li.
+  if (event.target.className === 'completed') {
+    event.target.className = '';
+    event.target.style.textDecoration = '';
+  }
+  else {
+    event.target.className = 'completed';
+    event.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)';
+  } 
 }
 
 createProject();
