@@ -76,14 +76,6 @@ const verifyMateria = () => {
   return verifica;
 } 
 
-btnMentor.addEventListener('click', (event) => {
-  const verificaMat = verifyMateria();
-  console.log(verificaMat);
-  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) return alert('Preencha todos os campos');
-  event.preventDefault();
-  containerMentor.appendChild(addMentor());
-});
-
 const marcarTodos = () => {
   materias.forEach((mat) => mat.checked = 1);
 }
@@ -91,6 +83,24 @@ const marcarTodos = () => {
 const desmarcarTodos = () => {
   materias.forEach((mat) => mat.checked = 0);
 }
+
+const clearForm = () => {
+  nameMentor.value = '';
+  emailMentor.value = '';
+  dayMentor.value = '';
+  initTimeMentor.value = '';
+  endTimeMentor.value = '';
+  desmarcarTodos();
+}
+
+btnMentor.addEventListener('click', (event) => {
+  const verificaMat = verifyMateria();
+  console.log(verificaMat);
+  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) return alert('Preencha todos os campos');
+  event.preventDefault();
+  containerMentor.appendChild(addMentor());
+  clearForm();
+});
 
 all.addEventListener('click', () => all.checked ? marcarTodos() : desmarcarTodos());
 
