@@ -86,13 +86,17 @@ const verifyStatus = () => {
 
 all.addEventListener('click', () => verifyStatus());
 
+
+// função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'block', que gera uma caixa de elemento de bloco.
 // https://www.w3schools.com/howto/howto_js_popup_form.asp
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById('myForm').style.display = 'block';
 }
 
+// função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'none', que desabilita a exibição do elemento
+// https://www.w3schools.com/howto/howto_js_popup_form.asp
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById('myForm').style.display = 'none';
 }
 
 function cartItemClickListener(event) {
