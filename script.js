@@ -1,3 +1,4 @@
+// if (!require) require = () => {}
 // const sendMail = require('./script-send');
 // import sendMail from './script-send.js';
 
@@ -13,13 +14,14 @@ const materias = document.getElementsByName('projetos-Bloco-1');
 const all = document.getElementById('all');
 // const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
+const selectVoluntarios = document.querySelector('.voluntarios')
+const nameProject = document.querySelector('.name-projects');
+const divProjectEst = document.querySelector('.project-listEst');
 
 const help = {
     bloco: 'projetos-Bloco-1',
     projectBlockOne: ['JS Unit Test','Zoo Functions','Shopping Cart'],
   };
-
-
 
 const createElement = (element, bloco, valor, tipo, classe) => {
   const elem = document.createElement(element);
@@ -50,6 +52,10 @@ function valueCheckbox(checkboxId) {
 
 const addMentor = () => {
   const div = document.createElement('div');
+  const opt = document.createElement('option');
+  opt.value = emailMentor.value;
+  opt.innerText = nameMentor.value;
+  selectVoluntarios.appendChild(opt);
   div.className = 'list-mentor-box';
   const p = document.createElement('p');
   p.innerText = `${nameMentor.value} 
@@ -111,6 +117,7 @@ btnMentor.addEventListener('click', (event) => {
   // return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
+  
   clearForm();
 });
 
