@@ -1,5 +1,4 @@
  const fetchForm = async (item) => {
-  try {
   const rawResponse = await fetch('https://showcase.api.linx.twenty57.net/Form2Channel', {
     method: 'POST',
     headers: {
@@ -20,11 +19,7 @@
 
   console.log(content);
   } 
-catch (error) {
-    return error;
-  }
-};
 
-// // console.log(fetchItem('MLB1762362591'));
+
 fetchForm().then(console.log);
 

@@ -7,146 +7,166 @@
     <link rel="stylesheet" href="style.css" />
     <title>Help Tryber</title>
   </head>
-  
 
   <body>
-
     <header class="header">
-      <img id="logo-trybe" src="Trybe-200x200 (1).jpg" width="60" alt="logo Trybe" />
+      <img
+        id="logo-trybe"
+        src="Trybe-200x200 (1).jpg"
+        width="60"
+        alt="logo Trybe"
+      />
       <h1 id="header-title">Help Tryber</h1>
     </header>
 
-<div class="container-geral">
-
-    <div class="container-mentoria">
-<!-- ação de onclick chamando função no JS  -->
-     <button class="open-button" onclick="openForm()" >Cadastro de Voluntário</button>
-      <div class="form-popup" id="myForm">
-       <form action="" id="mentoria-form">
-        <h2>CADASTRO VOLUNTÁRIO</h2>
-         <div class="information-mentor-container">
-            <input id="input-mentor-name" type="text" placeholder="Nome" required/>
-            <input type="email" id="input-mentor-email" placeholder="Email" required/>
-         </div>
-              <section class="date-mentor-form">
-                <p class="text-date">Dia Disponível</p>
-                <input type="date" name="" id="inputMentorDate" class="inputMentorDate" />  
-                <p class="text-time">Hora Disponível</p> 
-                <p class="text-time2">das</p>     
-                <input type="time" name="" id="inputMentorTimeStart" class="inputMentorTimeStart" /> 
-                <p class="text-time2">até</p>     
-                <input type="time" name="" id="inputMentorTimeEnd" class="inputMentorTimeEnd" />                 
-              </section>
-        <div class="project-list">
-          <div class="name-projects">
-            <label id="label-content-projects" for="project-list">Qual projeto você está disponível para ajudar? </label>
-            <label for="all">
-              <input type="checkbox" name="all" id="all">Todos
-            </label>
-          </div>
+    <div class="container-geral">
+      <div class="container-mentoria">
+        <!-- ação de onclick chamando função no JS  -->
+        <button class="open-button" onclick="openForm()">
+          Cadastro de Voluntário
+        </button>
+        <div class="form-popup" id="myForm">
+          <form action="" id="mentoria-form">
+            <h2>CADASTRO VOLUNTÁRIO</h2>
+            <div class="information-mentor-container">
+              <input
+                id="input-mentor-name"
+                type="text"
+                placeholder="Nome"
+                required
+              />
+              <input
+                type="email"
+                id="input-mentor-email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <section class="date-mentor-form">
+              <p class="text-date">Dia Disponível</p>
+              <input
+                type="date"
+                name=""
+                id="inputMentorDate"
+                class="inputMentorDate"
+              />
+              <p class="text-time">Hora Disponível</p>
+              <p class="text-time2">das</p>
+              <input
+                type="time"
+                name=""
+                id="inputMentorTimeStart"
+                class="inputMentorTimeStart"
+              />
+              <p class="text-time2">até</p>
+              <input
+                type="time"
+                name=""
+                id="inputMentorTimeEnd"
+                class="inputMentorTimeEnd"
+              />
+            </section>
+            <div class="project-list">
+              <div class="name-projects">
+                <label id="label-content-projects" for="project-list"
+                  >Qual projeto você está disponível para ajudar?
+                </label>
+                <label for="all">
+                  <input type="checkbox" name="all" id="all" />Todos
+                </label>
+              </div>
+            </div>
+            <section class="container-button-send-mentor">
+              <button
+                type="button"
+                id="btn-send-mentor"
+                class="btn-send-mentor btn cancel"
+                onclick="closeForm()"
+              >
+                Enviar
+              </button>
+            </section>
+          </form>
         </div>
-          <section class="container-button-send-mentor">
-            <button type="button" id="btn-send-mentor" class="btn-send-mentor btn cancel" onclick="closeForm()">Enviar</button>
+
+        <div class="coontainer-list-mentor">
+          <h3>Voluntários disponíveis</h3>
+        </div>
+      </div>
+
+      <!--      -->
+
+      <div class="container-geral-helped">
+        <form id="helped-form" action="">
+          <h2>Se precisa de ajuda é só preencher o Formulário</h2>
+
+          <div class="information-helped-container">
+            <input
+              class="input-helped-name"
+              id="input-helped-name"
+              type="text"
+              placeholder="Nome"
+            />
+            <input
+              type="email"
+              id="input-helped-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="container-selected-mentor">
+            <select name="DropDown-voluntários">
+              <option value="SelectedOptionVal">Selecione o voluntário</option>
+              <option>Flavio</option>
+              <option>Kauã</option>
+              <option>Henrique</option>
+            </select>
+            <label
+              ><input
+                name="check-voluntario"
+                type="checkbox"
+                value="checked"
+                check
+              />
+              Prefiro não escolher o Voluntário</label
+            >
+          </div>
+
+          <div class="project-list">
+            <div class="name-projects">
+              <label id="label-content-projects" for="project-list"
+                >Qual projeto você precisa de ajudar?
+              </label>
+              <label for="all">
+                <input type="checkbox" name="all" id="all" />Todos
+              </label>
+            </div>
+          </div>
+
+          <div class="container-helped-textarea">
+            <textarea
+              name="TextArea"
+              placeholder="Se precisa de ajuda em alguma outra matéria, deixe seu comentário aqui!"
+            ></textarea>
+          </div>
+          <section class="container-btn-send-helped">
+            <button
+              type="submit"
+              class="btn-send-helped"
+              onclick="alertSubmit()"
+              value="Exibir Alert"
+            >
+              Enviar
+            </button>
           </section>
-      </form>
-    </div>
-    
-    <div class="coontainer-list-mentor">
-      <h3>Voluntários disponíveis</h3>
-    </div>
-    </div>
-
-<div class="container-geral-helped">
-  <form id="helped-form" action="https://form2channel.com?form=sample" method="POST" enctype="multipart/form-data">
-  
-  <!-- Destinatários das informações do formulário -->
-  <input type="hidden" name="formto_googlesheets" value="me@flaviopaivavillar@gmail.com,flaviopaivavillar@gmail.com">
-   
-  <h2>Se precisa de ajuda é só preencher o Formulário</h2>
-
-  <div class="information-helped-container">
-    <input class="input-helped-name" id="input-helped-name" type="text" placeholder="Nome">
-    <input type="email" id="input-helped-email" placeholder="Email" required/>
-  </div>
-
-  <div class="container-selected-mentor">
-     <select name="DropDown-voluntários">
-      <option value="SelectedOptionVal">Selecione o voluntário</option>
-      <option>Flavio</option>
-      <option>Kauã</option>
-      <option>Henrique</option>
-    </select>
-    <label><input name="RadioButton" type="checkbox" value="checked" check> Prefiro não escolher o Voluntário</label>
-  </div>
-
-    <div class="project-list">
-      <div class="name-projects">
-        <label id="label-content-projects" for="project-list">Qual projeto você precisa de ajudar? </label>
-        <label for="all">
-          <input type="checkbox" name="all" id="all">Todos
-        </label>
+        </form>
       </div>
     </div>
-
-      <div class="container-helped-textarea">
-        <textarea name="TextArea" placeholder="Se precisa de ajuda em alguma outra matéria, deixe seu comentário aqui!"></textarea>
-      </div>
-    <section class="container-btn-send-helped">
-      <button type="button" class="btn-send-helped" onclick="alertSubmit()" value="Exibir Alert">Enviar</button>
-    </section>
-
-<div class="container-geral-feedback">
-  <div class="container-feedback">
-    <form id="feedback-form" action="https://form2channel.com?form=sample" method="POST" enctype="multipart/form-data">
-     <input type="hidden" name="formto_googlesheets" value="me@flaviopaivavillar@gmail.com,flaviopaivavillar@gmail.com">
-     
-    <h4>Deixe seu comentário sobre o programa de voluntários</h4>
-      
-    <div class="container-feedback-textarea">
-      <textarea name="TextArea" placeholder="Escreva seu comentário aqui!"></textarea>
-    </div>
-
-    <div class="container-feedback-notas">
-     <label for="feedback-notas">Qual nota você dá para sua ajuda?</label>
-      <select name="feedback-notas" class="feedback-notas">
-        <option></option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-      </select>
-    </div>
-
-    <div class="container-feedback-name">
-      <label><input name="RadioButton" type="radio" value="unchecked"> Podemos entrar em contato?</label>
-      <label for="input-helped-name">Se sentir confortável, deixe seu nome.</label>
-      <input class="input-helped-name" id="input-helped-name" type="text" placeholder="Nome">
-      <section class="container-btn-send-helped">
-        <button type="button" class="btn-send-feedback" onclick="funcao1()" value="Exibir Alert">Enviar</button>
-      </section>
-    </div>      
-    </form>    
-  </div> 
-</div>
-
-
-    </form>
-  </div> 
-</div> 
-
-  </div>    
 
     <div class="footer-container">
       <footer>Direitos reservados à Help Trybe©</footer>
     </div>
-
-    <!-- <script src="./script-send.js"></script> -->
     <script type="module" src="script.js"></script>
   </body>
 </html>
