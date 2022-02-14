@@ -147,6 +147,7 @@ h2 {
   background-repeat: no-repeat;
   padding: 5px 10px 5px 8px;
 }
+
 .inputMentorDate,
 .inputHelpedDate {
   width: 170px;
@@ -243,6 +244,7 @@ h2 {
   border-radius: 8px;
   text-transform: uppercase;
 }
+
 h3 {
   background-color: var(--cinza-claro);
   border-radius: 3px;
@@ -306,6 +308,22 @@ h3 {
   align-items: center;
 }
 
+#all, label {
+padding: 0px 5px;
+display:flex;
+justify-content:space-around;
+align-items: center;
+}
+
+.lab-checkbox {
+  width: 190px;
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content:left;
+  align-items: center;
+  padding: 5px;
+}
+
 .container-geral {
   display: flex;
   justify-content: space-around;
@@ -327,6 +345,8 @@ footer {
   background-color: #35414f41;
   border: 1px solid #dee2e6;
   text-align: center;
+  position:absolute;
+	bottom:0;
   width: 100%;
 }
 
@@ -338,34 +358,19 @@ footer {
   align-content: center;
 }
 
-.lab-checkbox {
-  width: 190px;
-  display:flex;
-  flex-direction: row-reverse;
-  justify-content:left;
-  align-items: center;
-  padding: 5px;
-}
-
 .projects {
   display: flex;
   align-items: center;
   margin-right: 5px;
 }
 
-.container-geral-helped {
-  display: flex;
-}
-
 .open-button {
   margin-top: 10px;
   background-color: var(--cinza1);
   background-image: url(form-white.png);
-  fill: white;
   background-repeat: no-repeat;
   background-size: 35px;
   background-position: 135px 5px;
-  fill: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 3px;
   color: white;
@@ -377,12 +382,7 @@ footer {
   right: 28px;
   width: 600px;
   font-size: 1.3rem;
-  font-weight: 600;
-  
-}
-
-.open-button:hover path {
-  fill: red;
+  font-weight: 600;  
 }
 
 #mentoria-form {
@@ -400,26 +400,41 @@ footer {
   display: none;
 }
 
-.container-geral-feedback {
+.feedback-form {
+  margin: 10px 40px 2px 40px;
+  width: 600px;
+  height: 280px;
   display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-.container-feedback {
-  background-color: var(--verde-claro);
-  width: 500px;
-  display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--verde-claro);
+  color: white;
 }
 
-h4 {
-  padding: 5px;
+
+.container-name-feedback  input {
+  width: 280px;
+  height: 30px;
+  margin: 5px 25px 5px 15px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 10px 5px 8px;
 }
+
+.input-feedback-name {
+  display: flex;
+  align-items: center;
+}
+
+
+
 .container-feedback-textarea {
   display: flex;
   justify-content: center;
