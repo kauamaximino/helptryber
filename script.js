@@ -66,7 +66,6 @@ const addMentor = () => {
   return div;
 };
 
-<<<<<<< HEAD
 const sendAndClear = (event) => {
   event.preventDefault();
   console.log('teste');
