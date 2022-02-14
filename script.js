@@ -88,7 +88,7 @@ const createMat = (classe, dad) => {
 function createProject() {
   createMat('materias', divProject);
   createMat('materiasEst', divProjectEst);
-  btnEst.addEventListener('click', sendAndClear);
+  // btnEst.addEventListener('click', sendAndClear);
 }
 
 const verifyMateria = () => {
@@ -119,7 +119,7 @@ const clearForm = () => {
 btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
-  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
+  // if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
   // return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
