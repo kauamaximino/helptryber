@@ -14,6 +14,7 @@ const materias = document.getElementsByName('projetos-Bloco-1');
 const all = document.getElementById('all');
 const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
+const selectVoluntarios = document.querySelector('.voluntarios')
 
 const help = {
     bloco: 'projetos-Bloco-1',
@@ -49,6 +50,9 @@ function valueCheckbox(checkboxId) {
 
 const addMentor = () => {
   const div = document.createElement('div');
+  const opt = document.createElement('option');
+  opt.innerText = nameMentor.value;
+  selectVoluntarios.appendChild(opt);
   div.className = 'list-mentor-box';
   const p = document.createElement('p');
   p.innerText = `${nameMentor.value} 
@@ -112,6 +116,7 @@ btnMentor.addEventListener('click', (event) => {
   return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
+  
   clearForm();
 });
 
