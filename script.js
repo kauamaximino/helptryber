@@ -1,5 +1,6 @@
+// if (!require) require = () => {}
 // const sendMail = require('./script-send');
-import sendMail from './script-send.js';
+// import sendMail from './script-send.js';
 
 // const projetosBloco1 = require('/home/kaua/Área de Trabalho/Projetos Pessoais/projeto-bonus-semama-ontrack/helptryber/projetosBloco1.js')'
 const nameMentor = document.getElementById('input-mentor-name');
@@ -18,8 +19,6 @@ const help = {
     bloco: 'projetos-Bloco-1',
     projectBlockOne: ['Lessons learned', 'Playground Functions', 'Meme Generator', 'Arte com Pixels', 'Lista de tarefas', 'Adivinhe a Cor', 'Carta Misteriosa', 'Trybewarts','JS Unit Test','Zoo Functions','Shopping Cart'],
   };
-
-
 
 const createElement = (element, bloco, valor, tipo, classe) => {
   const elem = document.createElement(element);
@@ -62,9 +61,10 @@ const addMentor = () => {
 
 const sendAndClear = (event) => {
   event.preventDefault();
-  sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
-  // sendMail();
   console.log('teste');
+  // sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
+  // sendMail();
+  
 }
 
 function createProject() {
@@ -76,6 +76,7 @@ function createProject() {
   projectBlockOne.forEach((elem) => {
     div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
   });
+  console.log(btnEst);
   btnEst.addEventListener('click', sendAndClear);
 }
 
