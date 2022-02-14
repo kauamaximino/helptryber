@@ -1,3 +1,5 @@
+// const sendMail = require('./script-send');
+
 // const projetosBloco1 = require('/home/kaua/Área de Trabalho/Projetos Pessoais/projeto-bonus-semama-ontrack/helptryber/projetosBloco1.js')'
 const nameMentor = document.getElementById('input-mentor-name');
 const emailMentor = document.getElementById('input-mentor-email');
@@ -8,13 +10,15 @@ const containerMentor = document.querySelector('.coontainer-list-mentor');
 const btnMentor = document.getElementById('btn-send-mentor');
 const materias = document.getElementsByName('projetos-Bloco-1');
 const all = document.getElementById('all');
+const btnEst = document.querySelector('.btn-send-helped');
+const divProject = document.querySelector('.project-list');
 
 const help = {
     bloco: 'projetos-Bloco-1',
     projectBlockOne: ['Lessons learned', 'Playground Functions', 'Meme Generator', 'Arte com Pixels', 'Lista de tarefas', 'Adivinhe a Cor', 'Carta Misteriosa', 'Trybewarts','JS Unit Test','Zoo Functions','Shopping Cart'],
   };
 
-const divProject = document.querySelector('.project-list');
+
 
 const createElement = (element, bloco, valor, tipo, classe) => {
   const elem = document.createElement(element);
@@ -33,7 +37,6 @@ const createElement = (element, bloco, valor, tipo, classe) => {
 };
 
 function valueCheckbox(checkboxId) {
-  console.log(all.checked);
   if (all.checked) return 'Todos os projetos'
   const arrayCheckbox = [];
   for (let i = 0; i < checkboxId.length; i += 1) {
@@ -56,6 +59,13 @@ const addMentor = () => {
   return div;
 };
 
+const sendAndClear = (event) => {
+  event.preventDefault();
+  sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
+  // sendMail();
+  console.log('teste');
+}
+
 function createProject() {
   const { projectBlockOne } = help;
   const { bloco } = help;
@@ -65,7 +75,7 @@ function createProject() {
   projectBlockOne.forEach((elem) => {
     div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
   });
-  
+  btnEst.addEventListener('click', sendAndClear);
 }
 
 const verifyMateria = () => {
@@ -129,9 +139,11 @@ function cartItemClickListener(event) {
   } 
 }
 
-function funcao1()
+function alertSubmit()
 {
 alert("Mensagem enviada com sucesso!");
 }
 
+//sendMail = (nomeEst, emailEst, textoEst, emailMent, nomeMent)
+// >>>>>>> f15dd0f6b47a938845116015ea04a2cab06aa527
 createProject();
