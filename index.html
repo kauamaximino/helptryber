@@ -180,23 +180,25 @@
             name="formto_googlesheets"
             value="me@flaviopaivavillar@gmail.com,flaviopaivavillar@gmail.com"
           />
-          <!-- Os campos de formulário precisam de atributos de nome e valor -->
-          <div class="container-name-email-feedback">
-            <input type="text" name="nome-feedback" value="Nome" />
-            <input type="email" name="email" value="Email - 'opcional'" />
+          <h4>
+            Participou do nosso programa de voluntariado? <br />
+            Deixe seu comentário sobre a ajuda recebida.
+          </h4>
+          <div class="container-name-feedback">
+            <div class="input-feedback-name">
+              <input type="text" name="nome-feedback" value="Nome" />
+              <p>Deixar seu nome é opcional!</p>
+            </div>
+            <p>
+              Mas se quiser um retorno sobre o seu feedback, por favor preencha
+              o campo do nome.
+            </p>
           </div>
 
           <div class="container-feedback-textarea">
             <textarea name="TextArea">TextArea Text</textarea>
           </div>
 
-          <!-- Suspenso:
-          <select name="DropDown1">
-            <option value="SelectedOptionVal">SelectedOption</option>
-          </select>
-          <select name="DropDown2">
-            <option>OptionText</option>
-          </select> -->
           <label for="nota-feedback"
             >Qual sua nota para ajuda recebida?
             <select name="nota-feedback">
@@ -213,33 +215,6 @@
               <option>10</option>
             </select>
           </label>
-
-          <label>
-            <input
-              name="CheckBox1"
-              type="checkbox"
-              value="checked"
-              check
-            />Gostaria de um retorno para o seu Feedback?</label
-          >
-          <!-- <label>CheckBox2: <input name="CheckBox2" type="checkbox" /></label>
-          <label
-            >CheckBox3: <input name="CheckBox3" type="checkbox" selected
-          /></label> -->
-          <!-- Botao de radio:
-          <label
-            ><input name="RadioButton" type="radio" value="checked" check />
-            Verificado</label
-          >
-          <label
-            ><input name="RadioButton" type="radio" value="unchecked" />
-            Desmarcado</label
-          >
-          Único arquivo:
-          <input type="file" name="fieldname1" />
-          Vários arquivos:
-          <input type="file" name="fieldname2[]" multiple /> -->
-
           <button type="Submit" onclick="alertSubmit()">Enviar</button>
         </form>
       </div>

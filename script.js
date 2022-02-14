@@ -16,7 +16,7 @@ const divProject = document.querySelector('.project-list');
 
 const help = {
     bloco: 'projetos-Bloco-1',
-    projectBlockOne: ['Lessons learned', 'Playground Functions', 'Meme Generator', 'Arte com Pixels', 'Lista de tarefas', 'Adivinhe a Cor', 'Carta Misteriosa', 'Trybewarts','JS Unit Test','Zoo Functions','Shopping Cart'],
+    projectBlockOne: ['JS Unit Test','Zoo Functions','Shopping Cart'],
   };
 
 

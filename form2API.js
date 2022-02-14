@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 //  const fetchForm = () => {
 //   const rawResponse = fetch('https://showcase.api.linx.twenty57.net/Form2Channel', {
 //     method: 'POST',

@@ -403,13 +403,36 @@ footer {
 .feedback-form {
   margin: 10px 40px 2px 40px;
   width: 600px;
-  height: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: var(--verde-claro);
   color: white;
 }
+
+
+.container-name-feedback  input {
+  width: 280px;
+  height: 30px;
+  margin: 5px 25px 5px 15px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 10px 5px 8px;
+}
+
+.input-feedback-name {
+  display: flex;
+  align-items: center;
+}
+
 
 
 .container-feedback-textarea {
@@ -423,23 +446,4 @@ footer {
   width: 400px;
   height: 50px;
   margin: 10px 0px;
-}
-
-.container-name-email-feedback {
-  display: flex;
-  justify-content: space-around;
-}
-
-.container-name-email-feedback  input {
-  width: 280px;
-  height: 30px;
-  margin: 5px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
-  background-color: white;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 5px 10px 5px 8px;
 }
