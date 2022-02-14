@@ -141,7 +141,8 @@ function cartItemClickListener(event) {
 
 function alertSubmit()
 {
-alert("Mensagem enviada com sucesso!");
+  setTimeout(() => {alert("Mensagem enviada com sucesso!");}, 3000);
+
 }
 
 //sendMail = (nomeEst, emailEst, textoEst, emailMent, nomeMent)
