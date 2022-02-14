@@ -15,6 +15,7 @@ const all = document.getElementById('all');
 const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
 const selectVoluntarios = document.querySelector('.voluntarios')
+const nameProject = document.querySelector('.name-projects');
 
 const help = {
     bloco: 'projetos-Bloco-1',
@@ -51,6 +52,7 @@ function valueCheckbox(checkboxId) {
 const addMentor = () => {
   const div = document.createElement('div');
   const opt = document.createElement('option');
+  opt.value = emailMentor.value;
   opt.innerText = nameMentor.value;
   selectVoluntarios.appendChild(opt);
   div.className = 'list-mentor-box';
