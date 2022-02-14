@@ -12,7 +12,7 @@ const containerMentor = document.querySelector('.coontainer-list-mentor');
 const btnMentor = document.getElementById('btn-send-mentor');
 const materias = document.getElementsByName('projetos-Bloco-1');
 const all = document.getElementById('all');
-const btnEst = document.querySelector('.btn-send-helped');
+// const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
 const selectVoluntarios = document.querySelector('.voluntarios')
 const nameProject = document.querySelector('.name-projects');
@@ -66,6 +66,7 @@ const addMentor = () => {
   return div;
 };
 
+<<<<<<< HEAD
 const sendAndClear = (event) => {
   event.preventDefault();
   console.log('teste');
@@ -120,7 +121,7 @@ btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
   if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
-  return alert('Preencha todos os campos');
+  // return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
   
