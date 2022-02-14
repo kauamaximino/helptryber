@@ -16,6 +16,7 @@ const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
 const selectVoluntarios = document.querySelector('.voluntarios')
 const nameProject = document.querySelector('.name-projects');
+const divProjectEst = document.querySelector('.project-listEst');
 
 const help = {
     bloco: 'projetos-Bloco-1',
@@ -73,15 +74,20 @@ const sendAndClear = (event) => {
   
 }
 
-function createProject() {
+const createMat = (classe, dad) => {
   const { projectBlockOne } = help;
   const { bloco } = help;
   const div = document.createElement('div');
-  div.className = 'materias'
-  divProject.appendChild(div);
+  div.className = classe
+  dad.appendChild(div);
   projectBlockOne.forEach((elem) => {
     div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
   });
+}
+
+function createProject() {
+  createMat('materias', divProject);
+  createMat('materiasEst', divProjectEst);
   console.log(btnEst);
   btnEst.addEventListener('click', sendAndClear);
 }
