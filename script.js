@@ -96,7 +96,8 @@ const clearForm = () => {
 btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
-  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) return alert('Preencha todos os campos');
+  if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
+  // return alert('Preencha todos os campos'); **** Desativado somente para realizar testes #### Reativar
   event.preventDefault();
   containerMentor.appendChild(addMentor());
   clearForm();
@@ -126,6 +127,11 @@ function cartItemClickListener(event) {
     event.target.className = 'completed';
     event.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)';
   } 
+}
+
+function funcao1()
+{
+alert("Mensagem enviada com sucesso!");
 }
 
 createProject();

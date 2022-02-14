@@ -61,7 +61,7 @@ h1 {
   /* display: flex; */
   margin: 10px 40px 2px 40px;
   width: 600px;
-  height: 340px;
+  height: 100%;
   flex-direction: column;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -75,8 +75,13 @@ h2 {
   padding: 8px;
 }
 
+.information-mentor-container, .information-helped-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .information-mentor-container  input {
-  width: 250px;
+  width: 280px;
   height: 30px;
   margin: 5px;
   box-sizing: border-box;
@@ -87,6 +92,46 @@ h2 {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 5px 10px 5px 8px;
+}
+
+.information-helped-container   input {
+  width: 280px;
+  height: 30px;
+  margin: 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 10px 5px 8px;
+}
+
+.container-selected-mentor {
+  display: flex;
+  align-items: center;
+  margin: 3px;
+}
+
+.container-selected-mentor select {
+  padding: 5px 7px 7px 10px;
+  width: 200px;
+  height: 30px;
+  margin: 5px 25px 5px 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 150ms ease;
+  color: #5A667F;
+}
+
+.container-helped-textarea {
+  display: flex;
+  justify-content: center;
 }
 
 .input-helped-name {
@@ -104,7 +149,7 @@ h2 {
 }
 .inputMentorDate,
 .inputHelpedDate {
-  width: 230px;
+  width: 170px;
   height: 30px;
   margin: 5px;
   box-sizing: border-box;
@@ -149,12 +194,15 @@ h2 {
 
 .text-date, .text-time {
   font-size: 12px;
-  text-align: center;
+  padding-top: 8px;
+  margin-left: 5px;
 
   }
 
 .text-time2 {
   font-size: small;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .date-mentor-form, 
@@ -164,7 +212,7 @@ h2 {
 }
 
 .footer-container {
-  margin-top: 70px;
+  margin-top: 90px;
   display: flex;
   width: auto;
 }
@@ -224,8 +272,7 @@ h3 {
   align-items: flex-end;
   width: 100px;
   text-align: center;
-  margin-top: 5px;
-  padding: 8px 2px;
+  padding: 5px 2px;
   border: 1px solid #eee;
   border-radius: 6px;
   background-color: var(--cinza-claro);
@@ -238,8 +285,6 @@ h3 {
   color: white;
   border: 2px solid white;
 }
-
-
 
 .list-mentor-box {
   background-image: url("https://365psd.com/images/previews/169/pushpin-2-52251.png");
@@ -254,8 +299,6 @@ h3 {
   text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
-
-
 
 .container-mentoria {
   display: flex;
@@ -273,11 +316,10 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
 textarea { 
   width: 520px;
-  height: 130px;
-  display: flex; 
-  margin-left: 40px;
+  height: 50px;
 }
 
 footer {
@@ -311,18 +353,13 @@ footer {
   margin-right: 5px;
 }
 
-
-#all {
-  margin: 5px 5px 5px 15px;
-}
-
-.container-helped {
+.container-geral-helped {
   display: flex;
 }
 
 .open-button {
   margin-top: 10px;
-  background-color: var(--verde-escuro);
+  background-color: var(--cinza1);
   background-image: url(form-white.png);
   fill: white;
   background-repeat: no-repeat;
@@ -355,10 +392,43 @@ footer {
   flex-direction: column;
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: var(--verde-escuro);
+  background-color: var(--cinza1);
   color: white;
 }
 
 .form-popup {
   display: none;
+}
+
+.container-geral-feedback {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.container-feedback {
+  background-color: var(--verde-claro);
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h4 {
+  padding: 5px;
+}
+.container-feedback-textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-feedback-textarea, textarea {
+  width: 400px;
+  height: 50px;
+  margin: 10px 0px;
 }
