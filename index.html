@@ -98,7 +98,17 @@
 
       <div class="container-geral-helped">
         <div class="container-form-helped">
-          <form id="helped-form" action="">
+          <form id="helped-form" class="helped-form"
+          action="https://form2channel.com?form=sample"
+          method="POST"
+          type="POST"
+          enctype="multipart/form-data">
+
+          <input
+          type="hidden"
+          name="formto_googlesheets"
+          value="me@flaviopaivavillar@gmail.com,flaviopaivavillar@gmail.com"
+        />
             <h2>Se precisa de ajuda é só preencher o Formulário</h2>
 
             <div class="information-helped-container">
@@ -111,17 +121,16 @@
               <input
                 type="email"
                 id="input-helped-email"
-                placeholder="Email"
-                required
+                placeholder="Email"                
               />
             </div>
 
             <div class="container-selected-mentor">
-              <select name="DropDown-voluntários">
+              <select name="formto_googlesheets">
                 <option value="SelectedOptionVal">
                   Selecione o voluntário
                 </option>
-                <option>Flavio</option>
+                <option value="flaviopaivavillar@gmail.com">Flavio</option>
                 <option>Kauã</option>
                 <option>Henrique</option>
               </select>
@@ -155,10 +164,9 @@
             </div>
             <section class="container-btn-send-helped">
               <button
-                type="submit"
-                class="btn-send-helped"
+                type="submit"   
+                class="btn-send-helped"             
                 onclick="alertSubmit()"
-                value="Exibir Alert"
               >
                 Enviar
               </button>
@@ -166,15 +174,13 @@
           </form>
         </div>
 
-        <div class="container-form-feedback"></div>
-        <!-- Tag de formulário com ação e método -->
         <form
           class="feedback-form"
           action="https://form2channel.com?form=sample"
           method="POST"
           enctype="multipart/form-data"
         >
-          <!-- Destinatários das informações do formulário -->
+
           <input
             type="hidden"
             name="formto_googlesheets"
@@ -186,7 +192,12 @@
           </h4>
           <div class="container-name-feedback">
             <div class="input-feedback-name">
-              <input type="text" name="nome-feedback" value="Nome" />
+              <input
+                id="input-mentor-name"
+                type="text"
+                placeholder="Nome"
+                required
+              />
               <p>Deixar seu nome é opcional!</p>
             </div>
             <p>
@@ -196,9 +207,12 @@
           </div>
 
           <div class="container-feedback-textarea">
-            <textarea name="TextArea">TextArea Text</textarea>
+            <textarea
+                name="TextArea"
+                placeholder="Deixe seu comentário para melhorarmos o programa de voluntários!"
+              ></textarea>
           </div>
-
+        <div class="container-nota-feedback">
           <label for="nota-feedback"
             >Qual sua nota para ajuda recebida?
             <select name="nota-feedback">
@@ -215,8 +229,10 @@
               <option>10</option>
             </select>
           </label>
-          <button type="Submit" onclick="alertSubmit()">Enviar</button>
+        </div>
+          <button type="Submit" class="btn-send-feedback"   onclick="alertSubmit()">Enviar</button>
         </form>
+      </div>
       </div>
 
       <!-- final do geral -->

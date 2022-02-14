@@ -11,7 +11,7 @@ const containerMentor = document.querySelector('.coontainer-list-mentor');
 const btnMentor = document.getElementById('btn-send-mentor');
 const materias = document.getElementsByName('projetos-Bloco-1');
 const all = document.getElementById('all');
-const btnEst = document.querySelector('.btn-send-helped');
+// const btnEst = document.querySelector('.btn-send-helped');
 const divProject = document.querySelector('.project-list');
 
 const help = {
@@ -60,24 +60,24 @@ const addMentor = () => {
   return div;
 };
 
-const sendAndClear = (event) => {
-  event.preventDefault();
-  sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
-  // sendMail();
-  console.log('teste');
-}
+// const sendAndClear = (event) => {
+//   event.preventDefault();
+//   sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
+//   // sendMail();
+//   console.log('teste');
+// }
 
-function createProject() {
-  const { projectBlockOne } = help;
-  const { bloco } = help;
-  const div = document.createElement('div');
-  div.className = 'materias'
-  divProject.appendChild(div);
-  projectBlockOne.forEach((elem) => {
-    div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
-  });
-  btnEst.addEventListener('click', sendAndClear);
-}
+// function createProject() {
+//   const { projectBlockOne } = help;
+//   const { bloco } = help;
+//   const div = document.createElement('div');
+//   div.className = 'materias'
+//   divProject.appendChild(div);
+//   projectBlockOne.forEach((elem) => {
+//     div.appendChild(createElement('input', bloco, elem, 'checkbox', 'projects'));
+//   });
+//   btnEst.addEventListener('click', sendAndClear);
+// }
 
 const verifyMateria = () => {
   let verifica = false;
@@ -108,7 +108,7 @@ btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
   if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
-  return alert('Preencha todos os campos');
+  // return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
   clearForm();
