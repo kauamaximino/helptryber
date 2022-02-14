@@ -1,5 +1,5 @@
 // const sendMail = require('./script-send');
-import sendMail from './script-send.js';
+// import sendMail from './script-send.js';
 
 // const projetosBloco1 = require('/home/kaua/Área de Trabalho/Projetos Pessoais/projeto-bonus-semama-ontrack/helptryber/projetosBloco1.js')'
 const nameMentor = document.getElementById('input-mentor-name');
