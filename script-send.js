@@ -1,7 +1,10 @@
+import mailjet from 'node-mailjet'
 const sendMail = (nomeEst, emailEst, textoEst, emailMent, nomeMent) => {
 // const sendMail = () => {
   console.log(nomeEst);
-  const mailjet = require ('node-mailjet')
+  // const mailjet = require ('node-mailjet')
+  
+  mailjet
   .connect('062aa6b5fa930d6b420871ccac03bf3b', '6ceb5bf48e2b5fd44b4e72919709427c')
   const request = mailjet
   .post("send", {'version': 'v3.1'})
@@ -34,6 +37,7 @@ const sendMail = (nomeEst, emailEst, textoEst, emailMent, nomeMent) => {
     })
 };
 // sendMail('JOAO', 'joao@gmail.com', 'ajudeme em localstorage', 'henrque.bonfim2@gmail.com', 'Henroqie');
-if (typeof module !== 'undefined') {
-  module.exports = sendMail;
-}
+// if (typeof module !== 'undefined') {
+//   module.exports = sendMail;
+// }
+export default sendMail;

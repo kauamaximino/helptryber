@@ -1,4 +1,5 @@
 // const sendMail = require('./script-send');
+import sendMail from './script-send.js';
 
 // const projetosBloco1 = require('/home/kaua/Área de Trabalho/Projetos Pessoais/projeto-bonus-semama-ontrack/helptryber/projetosBloco1.js')'
 const nameMentor = document.getElementById('input-mentor-name');
@@ -107,14 +108,13 @@ btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
   if (nameMentor.value === '' || emailMentor.value === '' || dayMentor.value === '' || initTimeMentor.value === '' || endTimeMentor.value === '' || verificaMat === false) 
-  // return alert('Preencha todos os campos'); **** Desativado somente para realizar testes #### Reativar
+  return alert('Preencha todos os campos');
   event.preventDefault();
   containerMentor.appendChild(addMentor());
   clearForm();
 });
 
 all.addEventListener('click', () => all.checked ? marcarTodos() : desmarcarTodos());
-
 
 // função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'block', que gera uma caixa de elemento de bloco.
 // https://www.w3schools.com/howto/howto_js_popup_form.asp

@@ -1,0 +1,23 @@
+{
+  "name": "helptryber",
+  "version": "1.0.0",
+  "description": "# Project Help Tryber",
+  "main": "conteudo-trybe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kauamaximino/helptryber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kauamaximino/helptryber/issues"
+  },
+  "homepage": "https://github.com/kauamaximino/helptryber#readme",
+  "dependencies": {
+    "node-mailjet": "^3.3.5"
+  }
+}
