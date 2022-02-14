@@ -88,7 +88,6 @@ const createMat = (classe, dad) => {
 function createProject() {
   createMat('materias', divProject);
   createMat('materiasEst', divProjectEst);
-  console.log(btnEst);
   btnEst.addEventListener('click', sendAndClear);
 }
 
