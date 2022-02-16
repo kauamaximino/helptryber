@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>Help Tryber</title>
   </head>
-
   <body>
     <header class="header">
       <img
@@ -18,7 +17,6 @@
       />
       <h1 id="header-title">Help Tryber</h1>
     </header>
-
     <div class="container-geral">
       <div class="container-mentoria">
         <!-- ação de onclick chamando função no JS  -->
@@ -88,29 +86,15 @@
             </section>
           </form>
         </div>
-
         <div class="coontainer-list-mentor">
           <h3>Voluntários disponíveis</h3>
         </div>
       </div>
-
       <!--      -->
-
       <div class="container-geral-helped">
         <div class="container-form-helped">
-          <form id="helped-form" class="helped-form"
-          action="https://form2channel.com?form=sample"
-          method="POST"
-          type="POST"
-          enctype="multipart/form-data">
-
-          <input
-          type="hidden"
-          name="formto_googlesheets"
-          value="me@flaviopaivavillar@gmail.com,flaviopaivavillar@gmail.com"
-        />
+          <form id="helped-form" action="">
             <h2>Se precisa de ajuda é só preencher o Formulário</h2>
-
             <div class="information-helped-container">
               <input
                 class="input-helped-name"
@@ -121,10 +105,10 @@
               <input
                 type="email"
                 id="input-helped-email"
-                placeholder="Email"                
+                placeholder="Email"
+                required
               />
             </div>
-
             <div class="container-selected-mentor">
               <select class="voluntarios">
                 <option value="SelectedOptionVal">
@@ -133,6 +117,10 @@
                 <option>Flavio</option>
                 <option>Kauã</option>
                 <option>Henrique</option>
+              <select name="DropDown-voluntários" class="voluntarios">
+                <option value="SelectedOptionVal">
+                  Selecione o voluntário
+                </option>
               </select>
               <label
                 ><input
@@ -144,7 +132,6 @@
                 Prefiro não escolher o Voluntário</label
               >
             </div>
-
             <div class="project-listEst">
               <div class="name-projects">
                 <label id="label-content-projects" for="project-listEst"
@@ -155,7 +142,6 @@
                 </label>
               </div>
             </div>
-
             <div class="container-helped-textarea">
               <textarea
                 name="TextArea"
@@ -164,23 +150,25 @@
             </div>
             <section class="container-btn-send-helped">
               <button
-                type="submit"   
-                class="btn-send-helped"             
+                type="submit"
+                class="btn-send-helped"
                 onclick="alertSubmit()"
+                value="Exibir Alert"
               >
                 Enviar
               </button>
             </section>
           </form>
         </div>
-
+        <div class="container-form-feedback"></div>
+        <!-- Tag de formulário com ação e método -->
         <form
           class="feedback-form"
           action="https://form2channel.com?form=sample"
           method="POST"
           enctype="multipart/form-data"
         >
-
+          <!-- Destinatários das informações do formulário -->
           <input
             type="hidden"
             name="formto_googlesheets"
@@ -192,12 +180,7 @@
           </h4>
           <div class="container-name-feedback">
             <div class="input-feedback-name">
-              <input
-                id="input-mentor-name"
-                type="text"
-                placeholder="Nome"
-                required
-              />
+              <input type="text" name="nome-feedback" value="Nome" />
               <p>Deixar seu nome é opcional!</p>
             </div>
             <p>
@@ -205,39 +188,21 @@
               o campo do nome.
             </p>
           </div>
-
           <div class="container-feedback-textarea">
-            <textarea
-                name="TextArea"
-                placeholder="Deixe seu comentário para melhorarmos o programa de voluntários!"
-              ></textarea>
+            <textarea name="TextArea">TextArea Text</textarea>
           </div>
-        <div class="container-nota-feedback">
-          <label for="nota-feedback"
-            >Qual sua nota para ajuda recebida?
-            <select name="nota-feedback">
-              <option></option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
-          </label>
-        </div>
-          <button type="Submit" class="btn-send-feedback"   onclick="alertSubmit()">Enviar</button>
+          <section class="container-btn-send-helped">
+            <button
+              type="submit"
+              class="btn-send-helped"
+            >
+              Enviar
+            </button>
+          </section>
         </form>
       </div>
-      </div>
-
       <!-- final do geral -->
     </div>
-
     <div class="footer-container">
       <footer>Direitos reservados à Help Trybe©</footer>
     </div>
