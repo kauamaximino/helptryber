@@ -50,6 +50,7 @@ function valueCheckbox(checkboxId) {
   return arrayCheckbox.join(', ');
 }
 
+// Shopping Cart ****************************************************
 const addMentor = () => {
   const div = document.createElement('div');
   const opt = document.createElement('option');
@@ -88,7 +89,7 @@ const createMat = (classe, dad) => {
 function createProject() {
   createMat('materias', divProject);
   createMat('materiasEst', divProjectEst);
-  btnEst.addEventListener('click', sendAndClear);
+  // btnEst.addEventListener('click', sendAndClear);
 }
 
 const verifyMateria = () => {
@@ -116,6 +117,7 @@ const clearForm = () => {
   desmarcarTodos();
 }
 
+
 btnMentor.addEventListener('click', (event) => {
   const verificaMat = verifyMateria();
   console.log(verificaMat);
@@ -130,13 +132,13 @@ btnMentor.addEventListener('click', (event) => {
 all.addEventListener('click', () => all.checked ? marcarTodos() : desmarcarTodos());
 
 // função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'block', que gera uma caixa de elemento de bloco.
-// https://www.w3schools.com/howto/howto_js_popup_form.asp
+
 function openForm() {
   document.getElementById('myForm').style.display = 'block';
 }
 
 // função qué é chamada no Html 'Button', pega o 'form' e chama a definição 'display' no CSS, atribuindo o valor 'none', que desabilita a exibição do elemento
-// https://www.w3schools.com/howto/howto_js_popup_form.asp
+
 function closeForm() {
   document.getElementById('myForm').style.display = 'none';
 }
